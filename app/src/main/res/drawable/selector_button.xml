@@ -3,12 +3,12 @@
     <item
         android:state_pressed="true"
         android:state_enabled="true"
-        android:drawable="@drawable/pressed_color_shape" />
+        android:drawable="@drawable/shape_pressed_color" />
     <item
         android:state_focused="true"
         android:state_enabled="true"
-        android:drawable="@drawable/pressed_color_shape" />
+        android:drawable="@drawable/shape_pressed_color" />
     <item
         android:state_enabled="true"
-        android:drawable="@drawable/solid_color_shape" />
+        android:drawable="@drawable/shape_ghost_button" />
 </selector>
