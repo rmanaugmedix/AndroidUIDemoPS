@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         button1 = (Button) findViewById(R.id.button);
         TextView TV = (TextView)findViewById(R.id.header);
 
-        Spannable wordtoSpan = new SpannableString(getString(R.string.retail_talent));
+        Spannable wordtoSpan = new SpannableString(getString(R.string.retain_talent));
 
         wordtoSpan.setSpan(new StyleSpan(Typeface.BOLD),7,12, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         wordtoSpan.setSpan(new ForegroundColorSpan(Color.GRAY), 0, 6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
