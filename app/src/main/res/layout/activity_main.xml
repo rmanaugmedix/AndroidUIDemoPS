@@ -12,9 +12,7 @@
         android:id="@+id/logo_placeholder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#aa000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="parent">
+        android:background="#aa000000">
 
         <ImageView
             android:id="@+id/imageView"
@@ -54,10 +52,13 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="10dp"
             android:background="@drawable/selector_button"
-            android:text="@string/sign_up"
-            android:textColor="@color/button_text"/>
+            android:text="@string/sign_in"
+            android:textColor="@color/button_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
