@@ -15,7 +15,6 @@ import android.text.style.StrikethroughSpan;
 import android.text.style.StyleSpan;
 import android.text.style.TextAppearanceSpan;
 import android.text.style.UnderlineSpan;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -37,9 +36,9 @@ public class MainActivity extends Activity {
         TextView tv1 = (TextView)findViewById(R.id.header);
         TextView tv2 = (TextView)findViewById(R.id.textView2);
 
-        String[] a = new String[2];
-        a[0] = "test1";
-        a[1] = "test2";
+        String[] suggestions = new String[2];
+        suggestions[0] = "test1";
+        suggestions[1] = "test2";
 
         Spannable wordtoSpan1 = new SpannableString(getResources().getString(R.string.retain_talent));
         Spannable wordtoSpan2 = new SpannableString(getResources().getString(R.string.do_not_have_an_account));
@@ -52,7 +51,7 @@ public class MainActivity extends Activity {
 
         wordtoSpan2.setSpan(new TextAppearanceSpan(context, R.style.CustomTextStyle),0,wordtoSpan2.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        //wordtoSpan.setSpan(new SuggestionSpan(context, a, SuggestionSpan.FLAG_AUTO_CORRECTION),7,12,0);
+        //wordtoSpan.setSpan(new SuggestionSpan(context, suggestions, SuggestionSpan.FLAG_AUTO_CORRECTION),7,12,0);
         wordtoSpan2.setSpan(new ClickableSpan() {
             @Override
             public void onClick(View view) {
