@@ -60,5 +60,15 @@
             android:layout_marginBottom="43dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:text="@string/do_not_have_an_account"/>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
