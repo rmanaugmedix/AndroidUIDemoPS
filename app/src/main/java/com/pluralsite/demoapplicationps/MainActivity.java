@@ -10,6 +10,7 @@ import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.LineHeightSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StrikethroughSpan;
 import android.text.style.StyleSpan;
@@ -35,19 +36,22 @@ public class MainActivity extends Activity {
         button1 = (Button) findViewById(R.id.button);
         TextView tv1 = (TextView)findViewById(R.id.header);
         TextView tv2 = (TextView)findViewById(R.id.textView2);
+        TextView tv3 = (TextView)findViewById(R.id.textView3);
 
         String[] suggestions = new String[2];
         suggestions[0] = "test1";
         suggestions[1] = "test2";
 
-        Spannable wordtoSpan1 = new SpannableString(getResources().getString(R.string.retain_talent));
+        Spannable wordtoSpan1 = new SpannableString(getResources().getString(R.string.description));
         Spannable wordtoSpan2 = new SpannableString(getResources().getString(R.string.do_not_have_an_account));
 
-        wordtoSpan1.setSpan(new StyleSpan(Typeface.BOLD),7,12, SPAN_EXCLUSIVE_EXCLUSIVE);
-        wordtoSpan1.setSpan(new ForegroundColorSpan(Color.GRAY), 0, 6, SPAN_EXCLUSIVE_EXCLUSIVE);
-        wordtoSpan1.setSpan(new RelativeSizeSpan(0.75f), 7,13, 0);
-        wordtoSpan1.setSpan(new StrikethroughSpan(), 0,6, 0);
-        wordtoSpan1.setSpan(new UnderlineSpan(), 7,13, 0);
+        wordtoSpan1.setSpan(new StyleSpan(Typeface.BOLD),0,3, SPAN_EXCLUSIVE_EXCLUSIVE);
+        wordtoSpan1.setSpan(new StyleSpan(Typeface.ITALIC),4,16, SPAN_EXCLUSIVE_EXCLUSIVE);
+        wordtoSpan1.setSpan(new ForegroundColorSpan(Color.GRAY), 4, 16, SPAN_EXCLUSIVE_EXCLUSIVE);
+        wordtoSpan1.setSpan(new RelativeSizeSpan(0.75f), 18,20, 0);
+        wordtoSpan1.setSpan(new StrikethroughSpan(), 22,36, 0);
+        wordtoSpan1.setSpan(new UnderlineSpan(), 37,44, 0);
+
 
         wordtoSpan2.setSpan(new TextAppearanceSpan(context, R.style.CustomTextStyle),0,wordtoSpan2.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
 
@@ -59,10 +63,10 @@ public class MainActivity extends Activity {
             }
         },wordtoSpan2.length()-11,wordtoSpan2.length(),0);
 
-        tv1.setText(wordtoSpan1);
+        tv2.setText(wordtoSpan1);
 
-        tv2.setText(wordtoSpan2);
-        tv2.setMovementMethod(LinkMovementMethod.getInstance());
+        tv3.setText(wordtoSpan2);
+        tv3.setMovementMethod(LinkMovementMethod.getInstance());
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override

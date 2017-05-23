@@ -39,12 +39,13 @@
             android:textSize="28dp"/>
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/header"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="20dp"
-            android:text="89% of employees say “If my employer invests in my training, I’m more likely to stay at the company long term.”"
+            android:text="@string/description"
             android:textColor="@color/backgroundColor"
             android:textSize="16dp"/>
 
@@ -62,7 +63,7 @@
             android:layout_centerHorizontal="true" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
